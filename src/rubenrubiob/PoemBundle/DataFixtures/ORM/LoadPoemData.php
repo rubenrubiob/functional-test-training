@@ -6,6 +6,10 @@ use Doctrine\Common\Persistence\ObjectManager;
 use rubenrubiob\PoemBundle\Entity\Poem;
 use rubenrubiob\PoemBundle\Entity\Author;
 
+/**
+ * Class LoadPoemData
+ * @package rubenrubiob\PoemBundle\DataFixtures\ORM
+ */
 class LoadPoemData implements FixtureInterface
 {
     /**

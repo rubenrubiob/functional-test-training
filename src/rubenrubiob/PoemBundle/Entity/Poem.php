@@ -36,7 +36,7 @@ class Poem
     protected $title;
 
     /**
-     * @ORM\ManyToOne(targetEntity="rubenrubiob\PoemBundle\Entity\Author", inversedBy="poems")
+     * @ORM\ManyToOne(targetEntity="Author", inversedBy="poems")
      * @ORM\JoinColumn(name="author_id", referencedColumnName="id", nullable=false)
      * @Serializer\Expose
      * @Serializer\SerializedName("author")
@@ -84,7 +84,7 @@ class Poem
      *
      * @return Poem
      */
-    public function setAuthor(\rubenrubiob\PoemBundle\Entity\Author $author)
+    public function setAuthor(Author $author)
     {
         $this->author = $author;
 

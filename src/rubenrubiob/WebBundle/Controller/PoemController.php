@@ -4,6 +4,10 @@ namespace rubenrubiob\WebBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
+/**
+ * Class PoemController
+ * @package rubenrubiob\WebBundle\Controller
+ */
 class PoemController extends Controller
 {
     /**
@@ -15,7 +19,7 @@ class PoemController extends Controller
         $poems = $this->getDoctrine()->getManager()->getRepository('rubenrubiobPoemBundle:Poem')->findAll();
 
         // Return HTML response
-        return $this->render('rubenrubiobWebBundle:Poem:all.html.twig',array(
+        return $this->render('rubenrubiobWebBundle:Poem:all.html.twig', array(
             'poems'      => $poems,
         ));
     }
