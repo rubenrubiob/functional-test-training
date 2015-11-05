@@ -1,0 +1,4 @@
+services:
+#    rubenrubiob_poem.example:
+#        class: rubenrubiob\PoemBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

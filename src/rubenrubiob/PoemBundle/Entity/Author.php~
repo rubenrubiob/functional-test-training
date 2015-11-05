@@ -1,0 +1,40 @@
+<?php
+
+namespace rubenrubiob\PoemBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+use JMS\Serializer\Annotation as Serializer;
+
+/**
+ * Poem
+ *
+ * @ORM\Table(name="author")
+ * @ORM\Entity(repositoryClass="rubenrubiob\PoemBundle\Entity\Author\AuthorRepository")
+ * @Serializer\ExclusionPolicy("all")
+ */
+class Author
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Id
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     * @Serializer\Expose
+     * @Serializer\SerializedName("id")
+     */
+    protected $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="title", type="string", length=255, nullable=false)
+     */
+    protected $name;
+
+    /**
+     * @ORM\OneToMany(targetEntity="rubenrubiob\PoemBundle\Entity\Poem", mappedBy="author")
+     */
+    protected $poems;
+}

@@ -1,0 +1,3 @@
+rubenrubiob_webservice_poem_all:
+    path:     /poems/
+    defaults: { _controller: rubenrubiobWebserviceBundle:Poem:all }

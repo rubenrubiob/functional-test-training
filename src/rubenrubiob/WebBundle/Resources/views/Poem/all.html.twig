@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>List of Poems</title>
+</head>
+<body>
+    <h1>List of Poems</h1>
+
+    {% if poems | length > 0 %}
+        <ul>
+            {% for poem in poems %}
+                <li>
+                    <ul>
+                        <li>
+                            Title: {{ poem.title }}
+                        </li>
+                        <li>
+                            Author: {{ poem.author.name }}
+                        </li>
+                    </ul>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No poems found</p>
+    {% endif %}
+</body>
+</html>

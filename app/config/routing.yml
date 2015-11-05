@@ -1,0 +1,9 @@
+rubenrubiob_web:
+    resource: "@rubenrubiobWebBundle/Resources/config/routing.yml"
+    prefix:   /web/
+
+rubenrubiob_webservice:
+    resource: "@rubenrubiobWebserviceBundle/Resources/config/routing.yml"
+    prefix:   /webservices/
+
+

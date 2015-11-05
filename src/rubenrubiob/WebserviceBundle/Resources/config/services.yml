@@ -1,0 +1,4 @@
+services:
+#    rubenrubiob_webservice.example:
+#        class: rubenrubiob\WebserviceBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
