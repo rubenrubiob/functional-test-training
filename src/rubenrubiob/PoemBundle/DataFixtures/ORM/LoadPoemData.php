@@ -48,34 +48,42 @@ class LoadPoemData implements FixtureInterface
         $poems = array(
             array(
                 'title'         => 'Romance Sonámbulo',
+                'year'          => 1924,
                 'authorIndex'   => 0,
             ),
             array(
                 'title'         => 'Pequeño Poema Infinto',
+                'year'          => 1930,
                 'authorIndex'   => 0,
             ),
             array(
                 'title'         => 'Tierra y luna',
+                'year'          => 1935,
                 'authorIndex'   => 0,
             ),
             array(
                 'title'         => 'Todo en ti fue naufragio',
+                'year'          => 1924,
                 'authorIndex'   => 1,
             ),
             array(
                 'title'         => 'Te recuerdo como eras en el último otoño',
+                'year'          => 1924,
                 'authorIndex'   => 1,
             ),
             array(
                 'title'         => 'Y ríase la gente',
+                'year'          => 1581,
                 'authorIndex'   => 2,
             ),
             array(
                 'title'         => 'El temps',
+                'year'          => 1985,
                 'authorIndex'   => 3,
             ),
             array(
                 'title'         => 'Lletra a Dolors',
+                'year'          => 1985,
                 'authorIndex'   => 3,
             ),
         );
@@ -85,6 +93,7 @@ class LoadPoemData implements FixtureInterface
             $poem = new Poem();
             $poem->setTitle($poemData['title']);
             $poem->setAuthor($authorsObjects[$poemData['authorIndex']]);
+            $poem->setYear($poemData['year']);
 
             $manager->persist($poem);
         }

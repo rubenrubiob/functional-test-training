@@ -44,6 +44,15 @@ class Poem
     protected $author;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="year", type="integer", nullable=false)
+     * @Serializer\Expose
+     * @Serializer\SerializedName("year")
+     */
+    protected $year;
+
+    /**
      * Get id
      *
      * @return integer
@@ -99,5 +108,29 @@ class Poem
     public function getAuthor()
     {
         return $this->author;
+    }
+
+    /**
+     * Set year
+     *
+     * @param integer $year
+     *
+     * @return Poem
+     */
+    public function setYear($year)
+    {
+        $this->year = $year;
+
+        return $this;
+    }
+
+    /**
+     * Get year
+     *
+     * @return integer
+     */
+    public function getYear()
+    {
+        return $this->year;
     }
 }
