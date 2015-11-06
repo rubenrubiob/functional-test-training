@@ -100,4 +100,15 @@ class Poem
     {
         return $this->author;
     }
+
+    /**
+     * @Serializer\VirtualProperty
+     * @Serializer\SerializedName("foobar")
+     *
+     * @return string
+     */
+    public function getFoobar()
+    {
+        return 'foobar';
+    }
 }

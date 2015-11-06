@@ -36,5 +36,6 @@ class PoemControllerTest extends WebTestCase
         // Check that there are 8 poem titles and 8 author names
         $this->assertEquals(8, $crawler->filter('li.poem-title')->count());
         $this->assertEquals(8, $crawler->filter('li.author-name')->count());
+        $this->assertEquals(0, $crawler->filter('li.i-should-not-be-here')->count()); // Added line to detect the bug
     }
 }

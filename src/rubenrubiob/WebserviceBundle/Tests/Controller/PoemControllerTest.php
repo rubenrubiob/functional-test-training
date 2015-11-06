@@ -57,6 +57,7 @@ class PoemControllerTest extends WebTestCase
         foreach ($this->currentResponse['poems'] as $poem) {
             $this->assertEquals(true, array_key_exists('title', $poem));
             $this->assertEquals(true, array_key_exists('author', $poem));
+            $this->assertEquals(false, array_key_exists('foobar', $poem)); // Added line to detect the bug
             $this->assertEquals(true, is_array($poem['author']));
             $this->assertEquals(false, empty($poem['author']));
             $this->assertEquals(true, array_key_exists('name', $poem['author']));
