@@ -56,10 +56,10 @@ class PoemControllerTest extends WebTestCase
         // Check required fields for each poem
         foreach ($this->currentResponse['poems'] as $poem) {
             $this->assertEquals(true, array_key_exists('title', $poem));
-            $this->assertEquals(true, array_key_exists('author', $poem));
-            $this->assertEquals(true, is_array($poem['author']));
-            $this->assertEquals(false, empty($poem['author']));
-            $this->assertEquals(true, array_key_exists('name', $poem['author']));
+            $this->assertEquals(true, array_key_exists('artist', $poem));
+            $this->assertEquals(true, is_array($poem['artist']));
+            $this->assertEquals(false, empty($poem['artist']));
+            $this->assertEquals(true, array_key_exists('name', $poem['artist']));
         }
     }
 
